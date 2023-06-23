@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTrending } from "../services/api";
 
-export  const HomePage = () => {
+ const HomePage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
 
   useEffect(() => {
@@ -21,3 +21,4 @@ export  const HomePage = () => {
     </main>
   );
 };
+export default HomePage;
