@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTrending } from "../services/api";
 
-export const Home = () => {
+export  const HomePage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
 
   useEffect(() => {

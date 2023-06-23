@@ -1,4 +1,4 @@
-export const Movies = () => {
+export const MoviesPage = () => {
   return (
     <main>
           <input type="text" />
