@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTrending } from "../../Services/Api";
-import { Title } from "./HomePage.styled";
+import { Title, MovieLink, MovieList } from "./HomePage.styled";
 
 const HomePage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -14,11 +14,13 @@ const HomePage = () => {
   return (
     <main>
       <Title>Trending Movies</Title>
-      <ul>
+      <MovieList>
         {trendingMovies.map((movie) => (
-          <li key={movie.id}>{movie.original_title}</li>
+          <li key={movie.id}>
+            <MovieLink to={`/movies/${movie.id}`}>{movie.title}</MovieLink>
+          </li>
         ))}
-      </ul>
+      </MovieList>
     </main>
   );
 };
