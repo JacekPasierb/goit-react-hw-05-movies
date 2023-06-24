@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { getTrending } from "../services/api";
+import { getTrending } from "../../Services/Api";
+import { Title } from "./HomePage.styled";
 
- const HomePage = () => {
+const HomePage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
 
   useEffect(() => {
@@ -12,11 +13,11 @@ import { getTrending } from "../services/api";
 
   return (
     <main>
-      <h1>Trending Movies</h1>
+      <Title>Trending Movies</Title>
       <ul>
-        {trendingMovies.map((movie) => 
+        {trendingMovies.map((movie) => (
           <li key={movie.id}>{movie.original_title}</li>
-        )}
+        ))}
       </ul>
     </main>
   );
