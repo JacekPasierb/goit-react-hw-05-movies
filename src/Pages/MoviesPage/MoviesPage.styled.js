@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const MovieList = styled.ul`
-display:flex;
-flex-direction:column;
-gap:10px;
-list-style:decimal;
-`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: decimal;
+`;
 export const MovieLink = styled(Link)`
   text-decoration: none;
   padding: 2px 8px;

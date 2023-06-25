@@ -17,5 +17,5 @@ const SearchBox = ({ onSubmit }) => {
 
 SearchBox.propTypes = {
   onSubmit: PropTypes.func,
-}
+};
 export default SearchBox;

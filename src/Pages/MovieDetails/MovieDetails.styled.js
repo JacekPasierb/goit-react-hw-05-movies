@@ -8,8 +8,7 @@ export const MovieBox = styled.div`
   gap: 20px;
 `;
 export const MovieInfo = styled.div``;
-export const Title = styled.h4`
-`;
+export const Title = styled.h4``;
 export const GenresList = styled.ul`
   list-style: none;
   display: flex;
@@ -27,5 +26,5 @@ export const Img = styled.img`
   box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.5);
 `;
 export const LinkBack = styled(Link)`
-  text-decoration:none;
+  text-decoration: none;
 `;

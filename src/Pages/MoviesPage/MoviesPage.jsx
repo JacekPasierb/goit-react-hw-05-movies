@@ -9,17 +9,15 @@ const MoviesPage = () => {
   const queryContext = query.get("query") ?? "";
   const [movieList, setMovieList] = useState([]);
   const location = useLocation();
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setQuery({ query: e.currentTarget.elements.searchInput.value });
   };
   useEffect(() => {
     if (!query.get("query")) {
-      
       setMovieList([]);
     } else {
-      
       getMovies(queryContext).then((data) => {
         setMovieList(data.results);
       });

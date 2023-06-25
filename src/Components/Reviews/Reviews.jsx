@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 const Reviews = () => {
   const [reviewsList, setReviewsList] = useState([]);
   const { movieId } = useParams();
-  
+
   useEffect(() => {
     getReviews(movieId).then((data) => setReviewsList(data.results));
-  },[movieId])
+  }, [movieId]);
   return (
     <ul>
       {reviewsList.length > 0

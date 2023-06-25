@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const CastList = styled.ul`
-list-style:none;
-`
+  list-style: none;
+`;
 export const CastItem = styled.li``;
 export const Img = styled.img`
   border-radius: 20px;

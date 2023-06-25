@@ -12,13 +12,12 @@ export const Header = styled.header`
   gap: 12px;
 
   margin-bottom: 16px;
-  
+
   background-color: lightblue;
 
   > nav {
     display: flex;
-    padding-top:30px;
-    
+    padding-top: 30px;
   }
 `;
 export const Main = styled.main`
@@ -26,15 +25,13 @@ export const Main = styled.main`
 `;
 export const Link = styled(NavLink)`
   padding: 8px 16px;
-  border-radius:50% 50% 0 0;
+  border-radius: 50% 50% 0 0;
   text-decoration: none;
   color: black;
   font-weight: 500;
-  font-size:26px;
-
+  font-size: 26px;
 
   &.active {
-    
     background-color: lightslategrey;
   }
 `;

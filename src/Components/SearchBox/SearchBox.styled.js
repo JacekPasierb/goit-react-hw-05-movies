@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const Input = styled.input`
-  border:none;
-  
-min-height:40px;
+  border: none;
 
-text-align:center;
-outline-style:none;
+  min-height: 40px;
 
-
+  text-align: center;
+  outline-style: none;
 `;
 export const Button = styled.button`
   border: none;
@@ -24,6 +22,6 @@ export const Button = styled.button`
   }
 `;
 export const Form = styled.form`
-display:flex;
-flex-direction:row;
-`
+  display: flex;
+  flex-direction: row;
+`;

@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Title = styled.h2`
-margin-top: 30px;
-margin-bottom:0;
+  margin-top: 30px;
+  margin-bottom: 0;
 `;
 export const MovieLink = styled(Link)`
   text-decoration: none;

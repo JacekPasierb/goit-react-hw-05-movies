@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { CastList, CastItem, Img } from "./Cast.styled";
 
 const Cast = () => {
-  const [castList, setCastList] = useState([])
-    const { movieId } = useParams();
+  const [castList, setCastList] = useState([]);
+  const { movieId } = useParams();
   useEffect(() => {
-   getMovieCredits(movieId).then((data) => setCastList(data.cast));
-},[movieId])
-   
+    getMovieCredits(movieId).then((data) => setCastList(data.cast));
+  }, [movieId]);
+
   return (
     <CastList>
       {castList.length > 0
@@ -22,8 +22,8 @@ const Cast = () => {
                     : `/src/Images/path404.jpg`
                 }
                 alt="actor"
-              loading="lazy"
-              width="120"
+                loading="lazy"
+                width="120"
                 height="180"
               />
               <h3>{name}</h3>
