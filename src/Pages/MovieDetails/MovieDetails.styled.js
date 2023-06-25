@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const MovieBox = styled.div`
   padding: 20px;
@@ -24,4 +25,7 @@ export const InfoBox = styled.div`
 export const Img = styled.img`
   border-radius: 20px;
   box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.5);
+`;
+export const LinkBack = styled(Link)`
+  text-decoration:none;
 `;

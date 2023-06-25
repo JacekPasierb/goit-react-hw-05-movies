@@ -1,4 +1,5 @@
 import { Input, Button, Form } from "./SearchBox.styled";
+import PropTypes from "prop-types";
 
 const SearchBox = ({ onSubmit }) => {
   return (
@@ -13,4 +14,8 @@ const SearchBox = ({ onSubmit }) => {
     </Form>
   );
 };
+
+SearchBox.propTypes = {
+  onSubmit: PropTypes.func,
+}
 export default SearchBox;

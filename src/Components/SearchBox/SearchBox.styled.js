@@ -11,15 +11,16 @@ outline-style:none;
 
 `;
 export const Button = styled.button`
-  border:none;
-  border-radius:0 30% 30% 0;
+  border: none;
+  border-radius: 0 30% 30% 0;
   min-height: 40px;
   padding: 20px;
   text-align: center;
-  cursor:pointer;
+  cursor: pointer;
+  background-color: lightblue;
   transition: background-color 500ms;
   &:hover {
-    background-color:lightgrey;
+    background-color: lightgrey;
   }
 `;
 export const Form = styled.form`

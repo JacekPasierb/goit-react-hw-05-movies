@@ -1,26 +1,37 @@
 import { useEffect, useState } from "react";
-import { useParams, Link, Outlet } from "react-router-dom";
-import { MovieBox, MovieInfo, Title, GenresList, InfoBox, Img } from "./MovieDetails.styled";
+import { useParams, Link, Outlet, useLocation } from "react-router-dom";
+import {
+  MovieBox,
+  MovieInfo,
+  Title,
+  GenresList,
+  InfoBox,
+  Img,
+  LinkBack,
+} from "./MovieDetails.styled";
+import { Button } from "../../Components/SearchBox/SearchBox.styled";
 import { getMovieDetails } from "../../Services/Api";
-
 
 const MovieDetails = () => {
   const [movieDetail, setMovieDetail] = useState({});
-
+  const location = useLocation();
   const { movieId } = useParams();
 
   useEffect(() => {
     getMovieDetails(movieId).then((data) => {
       setMovieDetail(data);
-      
     });
   }, [movieId]);
   const { original_title, overview, genres, poster_path, vote_average } =
-        movieDetail;
-     const score = vote_average * 10;
-    
+    movieDetail;
+  const score = vote_average * 10;
+
   return (
     <>
+      <LinkBack to={location.state?.from ?? "/"}>
+        <Button type="button">&larr; Go Back</Button>
+      </LinkBack>
+
       <MovieBox>
         <Img
           src={
@@ -50,14 +61,18 @@ const MovieDetails = () => {
         <Title>Additional Information</Title>
         <ul>
           <li>
-            <Link to="cast">Cast</Link>
+            <Link to="cast" state={{ ...location.state }}>
+              Cast
+            </Link>
           </li>
           <li>
-            <Link to="Reviews">Reviews</Link>
+            <Link to="Reviews" state={{ ...location.state }}>
+              Reviews
+            </Link>
           </li>
         </ul>
-          </InfoBox>
-          <Outlet/>
+      </InfoBox>
+      <Outlet />
     </>
   );
 };
